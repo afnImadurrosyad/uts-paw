@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom';
 
+//commit kosong untuk rename
+
 export default function KartuItem({ item }) {
   const { id, judul, kategori, tenggat } = item;
   return (

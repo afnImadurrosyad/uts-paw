@@ -1,6 +1,6 @@
 export default function KotakPencarian({ nilai, onUbah }) {
   return (
-    <input
+    <input //commit kosong untuk rename
       type='search'
       placeholder='Cari judul...'
       aria-label='Cari judul'
