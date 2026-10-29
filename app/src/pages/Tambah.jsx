@@ -5,9 +5,10 @@ import './Tambah.css';
 
 const AWAL = {
   judul: '',
-  kategori: 'Kuliah',
-  tenggat: '',
-  prioritas: 'sedang',
+  kategori: 'Taman Nasional',
+  kabupaten: 'Bandar Lampung',
+  hargaTiket: '',
+  jamBuka: '',
 };
 
 export default function Tambah() {
@@ -42,29 +43,37 @@ export default function Tambah() {
         name='kategori'
         value={form.kategori}
         onChange={ubah}>
-        <option>Kuliah</option>
-        <option>Organisasi</option>
+        <option>Taman Nasional</option>
+        <option>Gunung</option>
+        <option>Wisata Bahari</option>
+        <option>Pantai</option>
+        <option>Danau</option>
       </select>
 
-      <label htmlFor='tenggat'>Tenggat</label>
+      <label htmlFor='kabupaten'>Kabupaten/Kota</label>
+      <select
+        id='kabupaten'
+        name='kabupaten'
+        value={form.kabupaten}
+        onChange={ubah}>
+        <option>Bandar Lampung</option>
+        <option>Pringsewu</option>
+        <option>Natar</option>
+        <option>Tanggamus</option>
+        <option>Pesawaran</option>
+        <option>Lampung Barat</option>
+      </select>
+
+      <label htmlFor='hargaTiket'>Harga Tiket</label>
       <input
-        id='tenggat'
-        name='tenggat'
-        type='date'
-        value={form.tenggat}
+        id='hargaTiket'
+        name='hargaTiket'
+        value={form.hargaTiket}
         onChange={ubah}
       />
 
-      <label htmlFor='prioritas'>Prioritas</label>
-      <select
-        id='prioritas'
-        name='prioritas'
-        value={form.prioritas}
-        onChange={ubah}>
-        <option value='rendah'>Rendah</option>
-        <option value='sedang'>Sedang</option>
-        <option value='tinggi'>Tinggi</option>
-      </select>
+      <label htmlFor='jamBuka'>Jam Buka</label>
+      <input id='jamBuka' name='jamBuka' value={form.jamBuka} onChange={ubah} />
 
       <button type='submit'>Simpan</button>
     </form>
